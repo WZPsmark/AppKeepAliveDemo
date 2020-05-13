@@ -2,7 +2,8 @@
 Android 包含大多数App进程保活方案及代码整理接入即可，使用简单
 
 项目简介：
-项目包含保活方案如下：  
+项目包含保活方案如下：
+             
           1、1像素activity保活方案，代码见activity1包下，
             使用方式:
             KeepManager.getInstance().registerKeep(this);
