@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sk.appkeepalivedemo">
+
+
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"
+        android:maxSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+
+    <uses-permission
+        android:name="android.permission.AUTHENTICATE_ACCOUNTS"
+        android:maxSdkVersion="22" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity1.AliveActivity"
+            android:excludeFromRecents="true"
+            android:taskAffinity="com.sk.alive.keep"
+            android:theme="@style/KeepAliveTheme">
+        </activity>
+
+        <service android:name=".service.ForegroundService" />
+        <service android:name=".service.ForegroundService$InnerService" />
+
+
+        <service android:name=".service.StickyService" />
+
+
+        <service
+            android:name=".jobscheduler.AliveJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+
+
+
+        <service android:name=".account.AuthenticationService">
+            <!--<action android:name="android.accounts.AccountAuthenticator" /> 让系统能够找到这个账户服务-->
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/account_authenticator" />
+        </service>
+
+        <service android:name=".account.SyncService">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter" />
+        </service>
+
+        <provider
+            android:name=".account.SyncProvider"
+            android:authorities="com.sk.daemon.provider" />
+
+
+    </application>
+
+
+
+</manifest>

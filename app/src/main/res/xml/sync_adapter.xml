@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sync-adapter xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accountType="com.sk.daemon.account"
+    android:allowParallelSyncs="false"
+    android:contentAuthority="com.sk.daemon.provider"
+    android:isAlwaysSyncable="true"
+    android:userVisible="true" />
+
+    <!-- allowParallelSyncs 是否支持多账号同时同步-->
+
+    <!--contentAuthority 指定要同步的 ContentProvider-->
+
+    <!--android:userVisible 显示开关按钮 给用户控制-->

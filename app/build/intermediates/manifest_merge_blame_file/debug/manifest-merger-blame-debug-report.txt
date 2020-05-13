@@ -1,0 +1,76 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.sk.appkeepalivedemo"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission
+11-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:6:5-8:38
+12        android:name="android.permission.GET_ACCOUNTS"
+12-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:7:9-55
+13        android:maxSdkVersion="22" />
+13-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:8:9-35
+14    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+14-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:10:5-81
+14-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:10:22-78
+15    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+15-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:11:5-78
+15-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:11:22-75
+16    <uses-permission
+16-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:13:5-15:38
+17        android:name="android.permission.AUTHENTICATE_ACCOUNTS"
+17-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:14:9-64
+18        android:maxSdkVersion="22" />
+18-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:15:9-35
+19
+20    <application
+20-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:18:5-41:19
+21        android:allowBackup="true"
+21-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:19:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.1.0] C:\Users\DIY\.gradle\caches\transforms-2\files-2.1\34b4ab0d8b65ac74ddd00d45b26dd963\core-1.1.0\AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:icon="@mipmap/ic_launcher"
+24-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:20:9-43
+25        android:label="@string/app_name"
+25-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:21:9-41
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:22:9-54
+27        android:supportsRtl="true"
+27-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:23:9-35
+28        android:theme="@style/AppTheme" >
+28-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:24:9-40
+29        <activity android:name="com.sk.appkeepalivedemo.MainActivity" >
+29-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:25:9-31:20
+29-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:25:19-47
+30            <intent-filter>
+30-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:26:13-30:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:27:17-69
+31-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:27:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:29:17-77
+33-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:29:27-74
+34            </intent-filter>
+35        </activity>
+36        <activity
+36-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:33:9-38:20
+37            android:name="com.sk.appkeepalivedemo.activity1.AliveActivity"
+37-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:34:13-52
+38            android:excludeFromRecents="true"
+38-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:35:13-46
+39            android:taskAffinity="com.sk.alive.keep"
+39-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:36:13-53
+40            android:theme="@style/KeepAliveTheme" >
+40-->F:\AndroidStudyDemo\AppKeepAliveDemo\app\src\main\AndroidManifest.xml:37:13-50
+41        </activity>
+42    </application>
+43
+44</manifest>
